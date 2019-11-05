@@ -14,4 +14,7 @@ export function getSearchedCharacters(search, page = 1) {
     .then(res => res.json());
 }
 
-
+export function getSingleCharacter(id) {
+  return fetch(`https://last-airbender-api.herokuapp.com/api/v1/characters/${id}`)
+    .then(res => res.json());
+}

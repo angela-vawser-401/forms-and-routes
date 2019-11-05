@@ -14,6 +14,7 @@ export default function App() {
         <Switch>
           <Route path="/" component={Home} />
           <Route path="/list/:name" component={List} />
+          <Route exact path="/list" component={List} />
           <Route path="/detail" component={Detail} />
         </Switch>
         <Footer />
