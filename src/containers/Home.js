@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import getCharacter from '../../services/avatarApi';
-import Character from './Character';
-import Form from './Form';
+import { getCharacter } from '../../services/avatarApi';
+import Character from '../components/Character';
+import Form from '../components/Form';
 
 export default class Home extends Component {
   static propTypes = {
@@ -11,7 +11,8 @@ export default class Home extends Component {
 
   state = {
     data: {},
-    name: ''
+    name: '',
+    search: ''
   };
 
   newCharacter() {
