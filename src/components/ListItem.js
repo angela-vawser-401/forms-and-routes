@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import styles from './ListItem.css';
 
 
 class ListItem extends Component {
@@ -17,11 +18,14 @@ class ListItem extends Component {
     const characterUrl = `/character/${this.props._id}`;
     return (
       <Link to={characterUrl}>
-
-        <li key={this.props._id}>
-          <img src={this.props.photo} alt={this.props._id}></img>
-          <p>{this.props.name}</p>
-        </li>
+        <section className={styles.ListItem}>
+          <li key={this.props._id}>
+            <div>
+              <img src={this.props.photo} alt={this.props._id} />
+            </div>
+            <h2>{this.props.name}</h2>
+          </li>
+        </section>
       </Link>
     );
   }

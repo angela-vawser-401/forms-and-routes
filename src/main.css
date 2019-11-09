@@ -1,0 +1,8 @@
+body {
+  height: 100vh;
+  position: bottom;
+  background-image: url(./assets/bkgd-1.jpg);
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: repeat-y;
+}

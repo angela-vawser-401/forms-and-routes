@@ -1,10 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Header from './Header';
+import Footer from './Footer';
 import Home from '../containers/Home';
 import List from '../containers/List';
-import Detail from './Detail';
-import Footer from './Footer';
+import CharacterDetail from './Detail';
 
 export default function App() {
   return (
@@ -12,10 +12,10 @@ export default function App() {
       <>
         <Header />
         <Switch>
-          <Route path="/" component={Home} />
-          <Route path="/list/:name" component={List} />
+          <Route path="/list/:search" component={List} />
           <Route exact path="/list" component={List} />
-          <Route path="/detail" component={Detail} />
+          <Route path="/character/:name" component={CharacterDetail} />
+          <Route exact path="/" component={Home} />
         </Switch>
         <Footer />
       </>

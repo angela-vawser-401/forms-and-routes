@@ -1,8 +1,6 @@
-export function getCharacter(url) {
-  return fetch(`https://last-airbender-api.herokuapp.com${url}`)
-    .then(res => {
-      return res.json();
-    });
+export function getCharacter() {
+  return fetch('https://last-airbender-api.herokuapp.com/api/v1/characters/random')
+    .then(res => res.json());
 }
 
 export function getSearchedCharacters(search, page = 1) {

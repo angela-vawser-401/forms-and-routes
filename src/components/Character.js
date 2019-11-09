@@ -1,17 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './Character.css';
 
-const Character = ({ character }) => {
+const Character = ({ photo, name, handleClick }) => {
   return (
-    <div>
-      <img src={character.photoUrl} />
-      <h2>{character.name}</h2>
+    <div className={styles.Character}>
+      <img src={photo} />
+      <h1>{name}</h1>
+      <button onClick={handleClick}>Generate Character</button>
     </div>
   );
 };
 
 Character.propTypes = {
-  character: PropTypes.object.isRequired
+  photo: PropTypes.string.isRequired,
+  name: PropTypes.string,
+  handleClick: PropTypes.func.isRequired
 };
 
 export default Character;

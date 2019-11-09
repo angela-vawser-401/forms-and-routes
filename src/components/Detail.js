@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { getSingleCharacter } from '../../services/avatarApi';
+import styles from './Detail.css';
 
 class CharacterDetail extends Component {
 
@@ -27,11 +28,15 @@ class CharacterDetail extends Component {
 
     return (
       <>
-        <h1>{this.state.character.name}</h1>
-        <img src={this.state.character.photoUrl}></img>
-        <p>Gender: {this.state.character.gender}</p>
-        <p>Hair: {this.state.character.hair}</p>
-        <p>Affiliation: {this.state.character.affiliation}</p>
+        <div className={styles.Detail}>
+          <h1>{this.state.character.name}</h1>
+          <img src={this.state.character.photoUrl}></img>
+          <div>
+            <p>Gender: {this.state.character.gender}</p>
+            <p>Hair: {this.state.character.hair}</p>
+            <p>Affiliation: {this.state.character.affiliation}</p>
+          </div>
+        </div>
       </>
     );
   }

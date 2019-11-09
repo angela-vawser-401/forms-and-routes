@@ -1,0 +1,13 @@
+.Footer {
+  background: black;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  height: 10px;
+  width: 100vw;
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: 700;
+  padding: 25px;
+  border-top: 5px goldenrod solid;
+}

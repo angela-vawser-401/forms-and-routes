@@ -1,36 +1,40 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { getCharacter } from '../../services/avatarApi';
 import Character from '../components/Character';
-import Form from '../components/Form';
+import Search from '../components/Search';
+import { getCharacter } from '../../services/avatarApi';
+import styles from './Home.css';
 
-export default class Home extends Component {
+class Home extends Component {
   static propTypes = {
     history: PropTypes.object.isRequired
   }
 
   state = {
-    data: {},
+    photo: '',
     name: '',
-    search: ''
+    search: '',
   };
 
-  newCharacter() {
-    return getCharacter('/api/v1/characters/random')
-      .then(data => this.setState({ data: data[0] }));
-  }
-
   componentDidMount() {
-    this.newCharacter();
+    getCharacter()
+      .then(character => {
+        this.setState({ photo: character[0].photoUrl, name: character[0].name });
+      });
   }
 
-  handleClick = () => {
-    this.newCharacter();
+  handleClick = event => {
+    event.preventDefault();
+    getCharacter()
+      .then(character => {
+        this.setState({ photo: character[0].photoUrl, name: character[0].name });
+      });
   }
 
   handleSubmit = event => {
     event.preventDefault();
-    this.props.history.push(`/list/${this.state.name}`);
+    const searchUrl = `/list/${this.state.search}`;
+    this.props.history.push(searchUrl);
   }
 
   handleChange = ({ target }) => {
@@ -38,19 +42,14 @@ export default class Home extends Component {
   }
 
   render() {
-    const { data, name } = this.state;
 
     return (
-      <>
-        <Character character={data} />
-        <button onClick={this.handleClick}>RANDOM CHARACTER</button>
-        <Form
-          handleSubmit={this.handleSubmit}
-          handleChange={this.handleChange}
-          name={name}
-        />
-      </>
-
+      <div className={styles.Home}>
+        <Character photo={this.state.photo} name={this.state.name} handleClick={this.handleClick} />
+        <Search search={this.state.search} handleSubmit={this.handleSubmit} handleChange={this.handleChange} />
+      </div>
     );
   }
 }
+
+export default Home;

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ListItem from '../components/ListItem';
 import { getSearchedCharacters } from '../../services/avatarApi';
+import styles from './List.css';
 
 class List extends Component {
 
@@ -17,7 +18,6 @@ class List extends Component {
     matches: [],
     page: 1
   }
-
 
   componentDidMount() {
     getSearchedCharacters(this.props.match.params.search || '', 1)
@@ -57,17 +57,19 @@ class List extends Component {
         _id={item._id}
         photo={item.photoUrl} />
     ));
+
     return (
-      <div>
-        <button onClick={this.decrementPage}>Prev</button>
-        <button onClick={this.incrementPage}>Next</button>
+      <div className={styles.List}>
+        <div>
+          <button onClick={this.decrementPage}>Prev</button>
+          <button onClick={this.incrementPage}>Next</button>
+        </div>
         <ul>
           {elements}
         </ul>
       </div>
     );
   }
-
 }
 
 export default List;
