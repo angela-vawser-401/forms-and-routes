@@ -6,15 +6,21 @@ exports[`App component renders App 1`] = `
   <Switch>
     <Route
       component={[Function]}
-      path="/"
+      path="/list/:search"
     />
     <Route
       component={[Function]}
-      path="/list/:name"
+      exact={true}
+      path="/list"
     />
     <Route
-      component={Object {}}
-      path="/detail"
+      component={[Function]}
+      path="/character/:name"
+    />
+    <Route
+      component={[Function]}
+      exact={true}
+      path="/"
     />
   </Switch>
   <Footer />

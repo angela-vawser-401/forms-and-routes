@@ -1,5 +1,5 @@
 .Detail {
-  width: 60%vw;
+  width: 50%vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,14 +18,15 @@
 
   img {
     max-height: auto;
-    width: 70%;
+    width: 50%;
     border: 3px solid black;
     margin-top: 20px;
   }
 
   div{
-    width: 70%;
+    width: 50%;
     background: black;
+    border: 3px solid black;
   }
 
   p {

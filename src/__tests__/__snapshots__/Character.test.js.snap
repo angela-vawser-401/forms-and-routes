@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Character component renders a character 1`] = `
+<div
+  className="Character"
+>
+  <img
+    src="Image"
+  />
+  <h1>
+    Title
+  </h1>
+  <button
+    onClick={[Function]}
+  >
+    Generate Character
+  </button>
+</div>
+`;
