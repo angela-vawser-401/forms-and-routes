@@ -10,11 +10,9 @@ exports[`ListItem component renders ListItem 1`] = `
     <li
       key="1234"
     >
-      <div>
-        <img
-          alt="1234"
-        />
-      </div>
+      <img
+        alt="1234"
+      />
       <h2>
         Bart Simpson
       </h2>
