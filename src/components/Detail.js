@@ -35,6 +35,7 @@ class CharacterDetail extends Component {
             <p>Profession: {this.state.character.profession}</p>
             <p>Affiliation: {this.state.character.affiliation}</p>
             <p>Weapon: {this.state.character.weapon}</p>
+            <p>Enemies: {this.state.character.enemies}</p>
           </div>
         </div>
       </>

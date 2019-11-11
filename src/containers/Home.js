@@ -38,7 +38,7 @@ class Home extends Component {
   }
 
   handleChange = ({ target }) => {
-    this.setState({ name: target.value });
+    this.setState({ [target.name]: target.value });
   }
 
   render() {
