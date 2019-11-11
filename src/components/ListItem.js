@@ -20,9 +20,7 @@ class ListItem extends Component {
       <Link to={characterUrl}>
         <section className={styles.ListItem}>
           <li key={this.props._id}>
-            <div>
-              <img src={this.props.photo} alt={this.props._id} />
-            </div>
+            <img src={this.props.photo} alt={this.props._id} />
             <h2>{this.props.name}</h2>
           </li>
         </section>

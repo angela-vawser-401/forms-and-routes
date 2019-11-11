@@ -4,5 +4,6 @@ body {
   background-image: url(./assets/bkgd-1.jpg);
   background-size: cover;
   background-position: bottom;
-  background-repeat: repeat-y;
+  background-repeat: no-repeat;
+  background-color: #030a12;
 }

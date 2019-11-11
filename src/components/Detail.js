@@ -32,9 +32,9 @@ class CharacterDetail extends Component {
           <h1>{this.state.character.name}</h1>
           <img src={this.state.character.photoUrl}></img>
           <div>
-            <p>Gender: {this.state.character.gender}</p>
-            <p>Hair: {this.state.character.hair}</p>
+            <p>Profession: {this.state.character.profession}</p>
             <p>Affiliation: {this.state.character.affiliation}</p>
+            <p>Weapon: {this.state.character.weapon}</p>
           </div>
         </div>
       </>
