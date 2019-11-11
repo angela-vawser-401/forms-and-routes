@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListItem component renders ListItem 1`] = `
+<Link
+  to="/character/1234"
+>
+  <section
+    className="ListItem"
+  >
+    <li
+      key="1234"
+    >
+      <img
+        alt="1234"
+      />
+      <h2>
+        Bart Simpson
+      </h2>
+    </li>
+  </section>
+</Link>
+`;

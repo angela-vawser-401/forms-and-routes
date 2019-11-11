@@ -1,0 +1,27 @@
+.List {
+  div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 25px;
+  }
+
+  ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 90px;
+  }
+
+  button {
+    text-transform: uppercase;
+    padding: 5px;
+    margin: 17px;
+    background-color: black;
+    font-weight: 700;
+    color: white;
+    font-size: 16px;
+    display: block;
+    width: 150px;
+  }
+}
